@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct FreeGames {
+struct FreeGames: Decodable {
+    let id: Int
     let title: String
     let thumbnail: String
     let short_description: String
@@ -17,6 +18,7 @@ struct FreeGames {
     let publisher: String
     let developer: String
     let release_date: String
+    let freetogame_profile_url: String
 }
 
 /*
