@@ -7,8 +7,9 @@
 
 import UIKit
 
-enum URL: String {
+enum Link: String {
     case mainURL = "https://www.freetogame.com/api/"
+    case allGamesURL = "https://www.freetogame.com/api/games"
 }
 
 class MainViewController: UICollectionViewController {
@@ -29,6 +30,8 @@ class MainViewController: UICollectionViewController {
 
 }
 
+
+// MARK: UICollectionViewDelegateFlowLayout
 extension MainViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(width: UIScreen.main.bounds.width - 36, height: 200)
