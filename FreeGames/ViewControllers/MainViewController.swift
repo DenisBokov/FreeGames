@@ -57,7 +57,6 @@ extension MainViewController {
             
             do {
                 self?.games = try JSONDecoder().decode([FreeGames].self, from: data)
-                print(self?.games ?? "OOOPS!!!")
                 DispatchQueue.main.async {
                     self?.collectionView.reloadData()
                 }

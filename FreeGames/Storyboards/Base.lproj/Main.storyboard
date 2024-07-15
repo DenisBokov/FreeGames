@@ -34,16 +34,16 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8K-N2-JHU">
                                             <rect key="frame" x="89.5" y="56" width="71" height="36"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" systemColor="tableCellGroupedBackgroundColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstItem="k8K-N2-JHU" firstAttribute="centerY" secondItem="y7g-bR-cNU" secondAttribute="centerY" id="NlB-r9-F8D"/>
                                         <constraint firstItem="k8K-N2-JHU" firstAttribute="centerX" secondItem="y7g-bR-cNU" secondAttribute="centerX" id="zmr-Ha-wd2"/>
                                     </constraints>
                                 </collectionViewCellContentView>
-                                <color key="backgroundColor" systemColor="systemMintColor"/>
                                 <connections>
                                     <outlet property="nameGameLabel" destination="k8K-N2-JHU" id="VOZ-WG-wZn"/>
                                 </connections>
@@ -58,7 +58,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gO1-dS-1qu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="786" y="-37"/>
+            <point key="canvasLocation" x="785.625" y="-38.028169014084504"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GDh-y0-4OX">
@@ -83,8 +83,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemMintColor">
-            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="tableCellGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
