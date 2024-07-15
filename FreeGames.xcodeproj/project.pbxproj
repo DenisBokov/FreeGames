@@ -56,15 +56,63 @@
 		EF01A92D2C4534F000DBCCA8 /* FreeGames */ = {
 			isa = PBXGroup;
 			children = (
-				EF01A92E2C4534F000DBCCA8 /* AppDelegate.swift */,
-				EF01A9302C4534F000DBCCA8 /* SceneDelegate.swift */,
-				EF01A9322C4534F000DBCCA8 /* ViewController.swift */,
-				EF01A9342C4534F000DBCCA8 /* Main.storyboard */,
-				EF01A9372C4534F100DBCCA8 /* Assets.xcassets */,
-				EF01A9392C4534F100DBCCA8 /* LaunchScreen.storyboard */,
-				EF01A93C2C4534F100DBCCA8 /* Info.plist */,
+				EF01A9472C45530800DBCCA8 /* Resources */,
+				EF01A9462C4552C100DBCCA8 /* App */,
+				EF01A9452C45527800DBCCA8 /* Storyboards */,
+				EF01A9442C45525600DBCCA8 /* Services */,
+				EF01A9432C45523400DBCCA8 /* Models */,
+				EF01A9422C45521D00DBCCA8 /* ViewControllers */,
 			);
 			path = FreeGames;
+			sourceTree = "<group>";
+		};
+		EF01A9422C45521D00DBCCA8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EF01A9322C4534F000DBCCA8 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EF01A9432C45523400DBCCA8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EF01A9442C45525600DBCCA8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		EF01A9452C45527800DBCCA8 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				EF01A9342C4534F000DBCCA8 /* Main.storyboard */,
+				EF01A9392C4534F100DBCCA8 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		EF01A9462C4552C100DBCCA8 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				EF01A93C2C4534F100DBCCA8 /* Info.plist */,
+				EF01A92E2C4534F000DBCCA8 /* AppDelegate.swift */,
+				EF01A9302C4534F000DBCCA8 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		EF01A9472C45530800DBCCA8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EF01A9372C4534F100DBCCA8 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,7 +342,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XL6Q59VDPK;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FreeGames/Info.plist;
+				INFOPLIST_FILE = FreeGames/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -327,7 +375,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XL6Q59VDPK;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FreeGames/Info.plist;
+				INFOPLIST_FILE = FreeGames/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
