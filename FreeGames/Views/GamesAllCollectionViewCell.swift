@@ -8,5 +8,9 @@
 import UIKit
 
 class GamesAllCollectionViewCell: UICollectionViewCell {
+    @IBOutlet var nameGameLabel: UILabel!
     
+    func configure(with game: FreeGames) {
+        nameGameLabel.text = game.title
+    }
 }

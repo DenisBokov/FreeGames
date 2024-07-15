@@ -13,6 +13,8 @@ enum Link: String {
 }
 
 class MainViewController: UICollectionViewController {
+    
+    private var games: [FreeGames] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,11 +23,14 @@ class MainViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        1
+        games.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "games", for: indexPath) as? GamesAllCollectionViewCell else { return UICollectionViewCell() }
+        
+        let game = games[indexPath.item]
+        cell.configure(with: game)
         
         return cell
     }
@@ -44,15 +49,18 @@ extension MainViewController {
     private func fectAllGames() {
         guard let url = URL(string: Link.allGamesURL.rawValue) else { return }
         
-        URLSession.shared.dataTask(with: url) { data, _, error in
+        URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
             guard let data = data else {
                 print(error?.localizedDescription ?? "No error description")
                 return
             }
             
             do {
-                let games = try JSONDecoder().decode([FreeGames].self, from: data)
-                print(games)
+                self?.games = try JSONDecoder().decode([FreeGames].self, from: data)
+                print(self?.games ?? "OOOPS!!!")
+                DispatchQueue.main.async {
+                    self?.collectionView.reloadData()
+                }
             } catch let error {
                 print(error.localizedDescription)
             }
