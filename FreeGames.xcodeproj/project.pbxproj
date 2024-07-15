@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		EF01A92F2C4534F000DBCCA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF01A92E2C4534F000DBCCA8 /* AppDelegate.swift */; };
 		EF01A9312C4534F000DBCCA8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF01A9302C4534F000DBCCA8 /* SceneDelegate.swift */; };
-		EF01A9332C4534F000DBCCA8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF01A9322C4534F000DBCCA8 /* ViewController.swift */; };
+		EF01A9332C4534F000DBCCA8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF01A9322C4534F000DBCCA8 /* MainViewController.swift */; };
 		EF01A9362C4534F000DBCCA8 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = EF01A9352C4534F000DBCCA8 /* Base */; };
 		EF01A9382C4534F100DBCCA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF01A9372C4534F100DBCCA8 /* Assets.xcassets */; };
 		EF01A93B2C4534F100DBCCA8 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = EF01A93A2C4534F100DBCCA8 /* Base */; };
+		EF01A94A2C4558D200DBCCA8 /* GamesAllCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF01A9492C4558D200DBCCA8 /* GamesAllCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EF01A92B2C4534F000DBCCA8 /* FreeGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreeGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF01A92E2C4534F000DBCCA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF01A9302C4534F000DBCCA8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EF01A9322C4534F000DBCCA8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EF01A9322C4534F000DBCCA8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EF01A9352C4534F000DBCCA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF01A9372C4534F100DBCCA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF01A93A2C4534F100DBCCA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF01A93C2C4534F100DBCCA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF01A9492C4558D200DBCCA8 /* GamesAllCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesAllCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		EF01A92D2C4534F000DBCCA8 /* FreeGames */ = {
 			isa = PBXGroup;
 			children = (
+				EF01A9482C45589200DBCCA8 /* Views */,
 				EF01A9472C45530800DBCCA8 /* Resources */,
 				EF01A9462C4552C100DBCCA8 /* App */,
 				EF01A9452C45527800DBCCA8 /* Storyboards */,
@@ -69,7 +72,7 @@
 		EF01A9422C45521D00DBCCA8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				EF01A9322C4534F000DBCCA8 /* ViewController.swift */,
+				EF01A9322C4534F000DBCCA8 /* MainViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -113,6 +116,14 @@
 				EF01A9372C4534F100DBCCA8 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		EF01A9482C45589200DBCCA8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EF01A9492C4558D200DBCCA8 /* GamesAllCollectionViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,7 +197,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF01A9332C4534F000DBCCA8 /* ViewController.swift in Sources */,
+				EF01A94A2C4558D200DBCCA8 /* GamesAllCollectionViewCell.swift in Sources */,
+				EF01A9332C4534F000DBCCA8 /* MainViewController.swift in Sources */,
 				EF01A92F2C4534F000DBCCA8 /* AppDelegate.swift in Sources */,
 				EF01A9312C4534F000DBCCA8 /* SceneDelegate.swift in Sources */,
 			);
