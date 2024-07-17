@@ -8,7 +8,15 @@
 import UIKit
 
 class GamesAllCollectionViewCell: UICollectionViewCell {
+    
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    
     func configure(with game: FreeGames) {
+        activityIndicator.startAnimating()
+        activityIndicator.hidesWhenStopped = true
+        contentView.layer.cornerRadius = 15
+        contentView.layer.borderColor = UIColor.black.cgColor
+        contentView.layer.borderWidth = 3.0
         guard let url = URL(string: game.thumbnail) else { return }
         
         DispatchQueue.global().async { [weak self] in
@@ -16,6 +24,7 @@ class GamesAllCollectionViewCell: UICollectionViewCell {
             DispatchQueue.main.async {
                 guard let image = UIImage(data: imageData) else { return }
                 self?.contentView.backgroundColor = UIColor(patternImage: image)
+                self?.activityIndicator.stopAnimating()
             }
         }
     }
