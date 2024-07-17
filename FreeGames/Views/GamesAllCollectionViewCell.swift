@@ -11,12 +11,15 @@ class GamesAllCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
-    func configure(with game: FreeGames) {
+    func setupCollectionView() {
         activityIndicator.startAnimating()
         activityIndicator.hidesWhenStopped = true
         contentView.layer.cornerRadius = 15
         contentView.layer.borderColor = UIColor.black.cgColor
         contentView.layer.borderWidth = 3.0
+    }
+    
+    func configure(with game: FreeGames) {
         guard let url = URL(string: game.thumbnail) else { return }
         
         DispatchQueue.global().async { [weak self] in

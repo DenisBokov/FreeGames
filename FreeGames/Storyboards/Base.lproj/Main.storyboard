@@ -23,6 +23,10 @@
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="20" maxX="0.0" maxY="20"/>
                         </collectionViewFlowLayout>
+                        <activityIndicatorView key="backgroundView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" id="Ywe-qq-R4x">
+                            <rect key="frame" x="0.0" y="-64" width="320" height="568"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </activityIndicatorView>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="games" id="ql6-66-N3e" customClass="GamesAllCollectionViewCell" customModule="FreeGames" customModuleProvider="target">
                                 <rect key="frame" x="35" y="20" width="250" height="148"/>
@@ -52,6 +56,9 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="UTP-21-BjJ"/>
+                    <connections>
+                        <outlet property="activityIndicatorForMainVC" destination="Ywe-qq-R4x" id="oho-ee-wp0"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gO1-dS-1qu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

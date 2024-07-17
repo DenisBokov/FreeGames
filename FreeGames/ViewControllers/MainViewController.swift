@@ -7,17 +7,17 @@
 
 import UIKit
 
-enum Link: String {
-    case mainURL = "https://www.freetogame.com/api/"
-    case allGamesURL = "https://www.freetogame.com/api/games"
-}
-
 class MainViewController: UICollectionViewController {
+    
+    @IBOutlet var activityIndicatorForMainVC: UIActivityIndicatorView!
     
     private var games: [FreeGames] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        activityIndicatorForMainVC.startAnimating()
+        activityIndicatorForMainVC.hidesWhenStopped = true
         
         fectAllGames()
     }
@@ -30,7 +30,9 @@ class MainViewController: UICollectionViewController {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "games", for: indexPath) as? GamesAllCollectionViewCell else { return UICollectionViewCell() }
         
         let game = games[indexPath.item]
+        cell.setupCollectionView()
         cell.configure(with: game)
+        activityIndicatorForMainVC.stopAnimating()
         
         return cell
     }
@@ -47,24 +49,15 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
 
 extension MainViewController {
     private func fectAllGames() {
-        guard let url = URL(string: Link.allGamesURL.rawValue) else { return }
-        
-        URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
-            guard let data = data else {
-                print(error?.localizedDescription ?? "No error description")
-                return
+        NetworkManager.shared.fetch([FreeGames].self, from: Link.allGamesURL.rawValue) { [weak self] result in
+            switch result {
+            case .success(let games):
+                self?.games = games
+                self?.collectionView.reloadData()
+            case .failure(let error):
+                print(error)
             }
-            
-            do {
-                self?.games = try JSONDecoder().decode([FreeGames].self, from: data)
-                DispatchQueue.main.async {
-                    self?.collectionView.reloadData()
-                }
-            } catch let error {
-                print(error.localizedDescription)
-            }
-            
-        }.resume()
+        }
     }
 }
 
