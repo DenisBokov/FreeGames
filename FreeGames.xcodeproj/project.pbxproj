@@ -17,6 +17,7 @@
 		EF01A94C2C456C5600DBCCA8 /* FreeGames.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF01A94B2C456C5600DBCCA8 /* FreeGames.swift */; };
 		EF01A9502C45DBC500DBCCA8 /* ImageNotFound.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EF01A94F2C45DBC500DBCCA8 /* ImageNotFound.jpg */; };
 		EF01A9532C480FFB00DBCCA8 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF01A9522C480FFB00DBCCA8 /* NetworkManager.swift */; };
+		EF0EDEEF2C48422200F5538E /* ShowGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0EDEEE2C48422200F5538E /* ShowGameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		EF01A94B2C456C5600DBCCA8 /* FreeGames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeGames.swift; sourceTree = "<group>"; };
 		EF01A94F2C45DBC500DBCCA8 /* ImageNotFound.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ImageNotFound.jpg; path = ../../../../../Desktop/ImageNotFound.jpg; sourceTree = "<group>"; };
 		EF01A9522C480FFB00DBCCA8 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		EF0EDEEE2C48422200F5538E /* ShowGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowGameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				EF01A9322C4534F000DBCCA8 /* MainViewController.swift */,
+				EF0EDEEE2C48422200F5538E /* ShowGameViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				EF01A94C2C456C5600DBCCA8 /* FreeGames.swift in Sources */,
 				EF01A92F2C4534F000DBCCA8 /* AppDelegate.swift in Sources */,
 				EF01A9312C4534F000DBCCA8 /* SceneDelegate.swift in Sources */,
+				EF0EDEEF2C48422200F5538E /* ShowGameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

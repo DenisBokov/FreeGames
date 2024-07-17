@@ -20,14 +20,14 @@ class GamesAllCollectionViewCell: UICollectionViewCell {
     }
     
     func configure(with game: FreeGames) {
-        guard let url = URL(string: game.thumbnail) else { return }
-        
-        DispatchQueue.global().async { [weak self] in
-            guard let imageData = try? Data(contentsOf: url) else { return }
-            DispatchQueue.main.async {
-                guard let image = UIImage(data: imageData) else { return }
+        NetworkManager.shared.fetchImage(from: game.thumbnail) { [weak self] result in
+            switch result {
+            case .success(let image):
+                guard let image = UIImage(data: image) else { return }
                 self?.contentView.backgroundColor = UIColor(patternImage: image)
                 self?.activityIndicator.stopAnimating()
+            case .failure(let error):
+                print(error)
             }
         }
     }
