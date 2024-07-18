@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fUx-9u-KVH">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
@@ -15,7 +15,7 @@
             <objects>
                 <collectionViewController id="ETs-Cx-IMw" customClass="MainViewController" customModule="FreeGames" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="K7K-AI-p8m">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="TG9-BJ-dux">
@@ -25,19 +25,19 @@
                             <inset key="sectionInset" minX="0.0" minY="20" maxX="0.0" maxY="20"/>
                         </collectionViewFlowLayout>
                         <activityIndicatorView key="backgroundView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" id="Ywe-qq-R4x">
-                            <rect key="frame" x="0.0" y="-64" width="320" height="568"/>
+                            <rect key="frame" x="0.0" y="-103" width="393" height="852"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </activityIndicatorView>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="games" id="ql6-66-N3e" customClass="GamesAllCollectionViewCell" customModule="FreeGames" customModuleProvider="target">
-                                <rect key="frame" x="35" y="20" width="250" height="148"/>
+                                <rect key="frame" x="71.666666666666671" y="20" width="250" height="148"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="y7g-bR-cNU">
                                     <rect key="frame" x="0.0" y="0.0" width="250" height="148"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="xtu-Ng-kg9">
-                                            <rect key="frame" x="106.5" y="55.5" width="37" height="37"/>
+                                            <rect key="frame" x="106.66666666666667" y="55.666666666666657" width="37.000000000000014" height="37"/>
                                         </activityIndicatorView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -48,7 +48,7 @@
                                 </collectionViewCellContentView>
                                 <connections>
                                     <outlet property="activityIndicator" destination="xtu-Ng-kg9" id="L7a-K2-GcP"/>
-                                    <segue destination="nTd-uM-nb4" kind="show" id="sah-dz-22n"/>
+                                    <segue destination="nTd-uM-nb4" kind="show" identifier="game" id="sah-dz-22n"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -77,36 +77,57 @@
             <objects>
                 <viewController id="nTd-uM-nb4" customClass="ShowGameViewController" customModule="FreeGames" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G9Y-Ak-A2E">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tu0-gs-RUK">
-                                <rect key="frame" x="16" y="89" width="288" height="160"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tu0-gs-RUK">
+                                <rect key="frame" x="16" y="131.66666666666666" width="361" height="159.99999999999997"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="Oli-3q-W77"/>
+                                </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4MI-rZ-2He">
+                                <rect key="frame" x="16" y="330.66666666666669" width="361" height="32.333333333333314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="288" id="B0L-qL-JQS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="flr-lc-edx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4MI-rZ-2He" firstAttribute="leading" secondItem="flr-lc-edx" secondAttribute="leading" constant="16" id="DMC-Kf-6BK"/>
+                            <constraint firstItem="Tu0-gs-RUK" firstAttribute="top" secondItem="G9Y-Ak-A2E" secondAttribute="topMargin" constant="-23.5" id="Dyj-YY-CEJ"/>
+                            <constraint firstItem="Tu0-gs-RUK" firstAttribute="leading" secondItem="4MI-rZ-2He" secondAttribute="leading" id="OOV-k6-f9s"/>
+                            <constraint firstItem="Tu0-gs-RUK" firstAttribute="leading" secondItem="flr-lc-edx" secondAttribute="leading" constant="16" id="SEh-cp-9L2"/>
+                            <constraint firstItem="4MI-rZ-2He" firstAttribute="top" secondItem="Tu0-gs-RUK" secondAttribute="bottom" constant="39" id="ol6-0I-zw4"/>
+                            <constraint firstItem="Tu0-gs-RUK" firstAttribute="trailing" secondItem="4MI-rZ-2He" secondAttribute="trailing" id="yeg-Or-ykQ"/>
+                            <constraint firstItem="flr-lc-edx" firstAttribute="trailing" secondItem="Tu0-gs-RUK" secondAttribute="trailing" constant="16" id="ypZ-lr-gJO"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="a6B-uM-NfD"/>
                     <connections>
                         <outlet property="gameImageView" destination="Tu0-gs-RUK" id="u3Y-3t-sth"/>
+                        <outlet property="titelGameLabel" destination="4MI-rZ-2He" id="ozt-AL-Ukv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K61-xT-R0g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1674" y="-312"/>
+            <point key="canvasLocation" x="1672.5" y="-312.67605633802816"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="EbP-Ko-eiw">
             <objects>
                 <viewController id="WlM-CX-J1n" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8wi-ES-dDr">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gTZ-zt-Uur">
-                                <rect key="frame" x="0.0" y="45" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="45" width="393" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -128,7 +149,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fUx-9u-KVH" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="rdg-H7-diC">
-                        <rect key="frame" x="0.0" y="20" width="320" height="92.5"/>
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

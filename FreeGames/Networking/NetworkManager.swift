@@ -10,6 +10,7 @@ import Foundation
 enum Link: String {
     case mainURL = "https://www.freetogame.com/api/"
     case allGamesURL = "https://www.freetogame.com/api/games"
+    case aboutGame = "https://www.freetogame.com/api/game?id={game_id}"
 }
 
 enum NetworkError: Error {

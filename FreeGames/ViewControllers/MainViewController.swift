@@ -36,9 +36,18 @@ class MainViewController: UICollectionViewController {
         
         return cell
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "game" {
+            guard let indexPaths = collectionView.indexPathsForSelectedItems else { return }
+            indexPaths.forEach { indexPath in
+                
+                guard let showGameVC = segue.destination as? ShowGameViewController else { return }
+                showGameVC.game = games[indexPath.item]
+            }
+        }
+    }
 }
-
 
 // MARK: UICollectionViewDelegateFlowLayout
 extension MainViewController: UICollectionViewDelegateFlowLayout {
@@ -47,6 +56,7 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
+// MARK: Networking
 extension MainViewController {
     private func fectAllGames() {
         NetworkManager.shared.fetch([FreeGames].self, from: Link.allGamesURL.rawValue) { [weak self] result in
