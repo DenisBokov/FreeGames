@@ -18,6 +18,9 @@
 		EF01A9502C45DBC500DBCCA8 /* ImageNotFound.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EF01A94F2C45DBC500DBCCA8 /* ImageNotFound.jpg */; };
 		EF01A9532C480FFB00DBCCA8 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF01A9522C480FFB00DBCCA8 /* NetworkManager.swift */; };
 		EF0EDEEF2C48422200F5538E /* ShowGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0EDEEE2C48422200F5538E /* ShowGameViewController.swift */; };
+		EF66C0EB2C4FE60F00DD35C0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = EF66C0EA2C4FE60F00DD35C0 /* Alamofire */; };
+		EF66C0ED2C4FE60F00DD35C0 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = EF66C0EC2C4FE60F00DD35C0 /* AlamofireDynamic */; };
+		EF66C0EF2C4FE63C00DD35C0 /* NetworkManagerWithAlamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF66C0EE2C4FE63C00DD35C0 /* NetworkManagerWithAlamofire.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,7 @@
 		EF01A94F2C45DBC500DBCCA8 /* ImageNotFound.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ImageNotFound.jpg; path = ../../../../../Desktop/ImageNotFound.jpg; sourceTree = "<group>"; };
 		EF01A9522C480FFB00DBCCA8 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		EF0EDEEE2C48422200F5538E /* ShowGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowGameViewController.swift; sourceTree = "<group>"; };
+		EF66C0EE2C4FE63C00DD35C0 /* NetworkManagerWithAlamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerWithAlamofire.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF66C0EB2C4FE60F00DD35C0 /* Alamofire in Frameworks */,
+				EF66C0ED2C4FE60F00DD35C0 /* AlamofireDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				EF01A9522C480FFB00DBCCA8 /* NetworkManager.swift */,
+				EF66C0EE2C4FE63C00DD35C0 /* NetworkManagerWithAlamofire.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -162,6 +169,10 @@
 			dependencies = (
 			);
 			name = FreeGames;
+			packageProductDependencies = (
+				EF66C0EA2C4FE60F00DD35C0 /* Alamofire */,
+				EF66C0EC2C4FE60F00DD35C0 /* AlamofireDynamic */,
+			);
 			productName = FreeGames;
 			productReference = EF01A92B2C4534F000DBCCA8 /* FreeGames.app */;
 			productType = "com.apple.product-type.application";
@@ -190,6 +201,9 @@
 				Base,
 			);
 			mainGroup = EF01A9222C4534F000DBCCA8;
+			packageReferences = (
+				EF66C0E92C4FE60F00DD35C0 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = EF01A92C2C4534F000DBCCA8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -225,6 +239,7 @@
 				EF01A92F2C4534F000DBCCA8 /* AppDelegate.swift in Sources */,
 				EF01A9312C4534F000DBCCA8 /* SceneDelegate.swift in Sources */,
 				EF0EDEEF2C48422200F5538E /* ShowGameViewController.swift in Sources */,
+				EF66C0EF2C4FE63C00DD35C0 /* NetworkManagerWithAlamofire.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +472,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EF66C0E92C4FE60F00DD35C0 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EF66C0EA2C4FE60F00DD35C0 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF66C0E92C4FE60F00DD35C0 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		EF66C0EC2C4FE60F00DD35C0 /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF66C0E92C4FE60F00DD35C0 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EF01A9232C4534F000DBCCA8 /* Project object */;
 }
