@@ -58,7 +58,19 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
 // MARK: Networking
 extension MainViewController {
     private func fectAllGames() {
-        NetworkManager.shared.fetch([FreeGames].self, from: Link.allGamesURL.rawValue) { [weak self] result in
+        /// С помощью URLSession
+//        NetworkManager.shared.fetch([FreeGames].self, from: Link.allGamesURL.rawValue) { [weak self] result in
+//            switch result {
+//            case .success(let games):
+//                self?.games = games
+//                self?.collectionView.reloadData()
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
+        
+        /// С помощью Alamofire
+        NetworkManagerWithAlamofire.shared.fetchGames(from: Link.allGamesURL.rawValue) { [weak self] result in
             switch result {
             case .success(let games):
                 self?.games = games

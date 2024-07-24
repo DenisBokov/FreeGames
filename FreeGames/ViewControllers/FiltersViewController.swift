@@ -11,7 +11,7 @@ class FiltersViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .brown
+//        view.backgroundColor = .lightGray
         
         sheetPresentationController.delegate = self
         setupPresentationController()
@@ -28,8 +28,7 @@ extension FiltersViewController: UISheetPresentationControllerDelegate {
     private func setupPresentationController() {
         sheetPresentationController.selectedDetentIdentifier = .medium
         sheetPresentationController.prefersGrabberVisible = true
-        sheetPresentationController.detents = [
-            .medium()
-        ]
+        sheetPresentationController.detents = [.medium()]
+        sheetPresentationController.preferredCornerRadius = 24
     }
 }
