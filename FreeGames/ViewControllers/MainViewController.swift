@@ -12,7 +12,7 @@ class MainViewController: UICollectionViewController {
     @IBOutlet var activityIndicatorForMainVC: UIActivityIndicatorView!
     
     private var games: [FreeGames] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -8,28 +8,28 @@
 import UIKit
 
 class FiltersViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .brown
         
-        let showGameVC = FiltersViewController()
-        
-        if let sheet = showGameVC.sheetPresentationController {
-            sheet.detents = [.medium(), .large()]
-        }
-        
-        present(showGameVC, animated: true, completion: nil)
+        sheetPresentationController.delegate = self
+        setupPresentationController()
     }
     
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension FiltersViewController: UISheetPresentationControllerDelegate {
+    
+    override var sheetPresentationController: UISheetPresentationController {
+        presentationController as! UISheetPresentationController
     }
-    */
-
+    
+    private func setupPresentationController() {
+        sheetPresentationController.selectedDetentIdentifier = .medium
+        sheetPresentationController.prefersGrabberVisible = true
+        sheetPresentationController.detents = [
+            .medium()
+        ]
+    }
 }
