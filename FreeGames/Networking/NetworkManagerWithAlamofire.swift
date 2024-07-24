@@ -6,3 +6,13 @@
 //
 
 import Foundation
+import Alamofire
+
+
+class NetworkManagerWithAlamofire {
+    static var shared = NetworkManagerWithAlamofire()
+    
+    private init() {}
+    
+    
+}

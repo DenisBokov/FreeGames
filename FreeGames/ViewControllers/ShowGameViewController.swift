@@ -19,7 +19,6 @@ class ShowGameViewController: UIViewController {
         super.viewDidLoad()
         
         titelGameLabel.text = game.title
-//        gameImageView.image = UIImage(named: "ImageNotFound")
         
         fetchImageGame()
     }
