@@ -19,6 +19,7 @@
 		EF01A9532C480FFB00DBCCA8 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF01A9522C480FFB00DBCCA8 /* NetworkManager.swift */; };
 		EF0EDEEF2C48422200F5538E /* ShowGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0EDEEE2C48422200F5538E /* ShowGameViewController.swift */; };
 		EF4D5CA62C50E86100FBF7CE /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4D5CA52C50E86100FBF7CE /* FiltersViewController.swift */; };
+		EF4D5CA82C52870600FBF7CE /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4D5CA72C52870600FBF7CE /* ImageCacheManager.swift */; };
 		EF66C0EB2C4FE60F00DD35C0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = EF66C0EA2C4FE60F00DD35C0 /* Alamofire */; };
 		EF66C0EF2C4FE63C00DD35C0 /* NetworkManagerWithAlamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF66C0EE2C4FE63C00DD35C0 /* NetworkManagerWithAlamofire.swift */; };
 /* End PBXBuildFile section */
@@ -38,6 +39,7 @@
 		EF01A9522C480FFB00DBCCA8 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		EF0EDEEE2C48422200F5538E /* ShowGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowGameViewController.swift; sourceTree = "<group>"; };
 		EF4D5CA52C50E86100FBF7CE /* FiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
+		EF4D5CA72C52870600FBF7CE /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
 		EF66C0EE2C4FE63C00DD35C0 /* NetworkManagerWithAlamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerWithAlamofire.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +107,7 @@
 		EF01A9442C45525600DBCCA8 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				EF4D5CA72C52870600FBF7CE /* ImageCacheManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 			files = (
 				EF01A9532C480FFB00DBCCA8 /* NetworkManager.swift in Sources */,
 				EF01A94A2C4558D200DBCCA8 /* GamesAllCollectionViewCell.swift in Sources */,
+				EF4D5CA82C52870600FBF7CE /* ImageCacheManager.swift in Sources */,
 				EF01A9332C4534F000DBCCA8 /* MainViewController.swift in Sources */,
 				EF01A94C2C456C5600DBCCA8 /* FreeGames.swift in Sources */,
 				EF01A92F2C4534F000DBCCA8 /* AppDelegate.swift in Sources */,
