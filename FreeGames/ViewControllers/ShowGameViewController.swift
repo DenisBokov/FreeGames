@@ -26,7 +26,8 @@ class ShowGameViewController: UIViewController {
 
 extension ShowGameViewController {
     func fetchImageGame() {
-        NetworkManager.shared.fetchImage(from: game.thumbnail) { [weak self] result in
+        guard let url = URL(string: game.thumbnail) else { return }
+        NetworkManager.shared.fetchImage(from: url) { [weak self] result in
             switch result {
             case .success(let imageData):
                 self?.gameImageView.image = UIImage(data: imageData)

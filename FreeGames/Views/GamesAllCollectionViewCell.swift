@@ -11,16 +11,16 @@ class GamesAllCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
-    func setupCollectionView() {
-        activityIndicator.startAnimating()
-        activityIndicator.hidesWhenStopped = true
-        contentView.layer.cornerRadius = 15
-        contentView.layer.borderColor = UIColor.black.cgColor
-        contentView.layer.borderWidth = 3.0
+    private var imageURL: URL? {
+        didSet {
+            contentView.backgroundColor = nil
+            updateImage()
+        }
     }
     
-    func configure(with game: FreeGames) {
-        NetworkManager.shared.fetchImage(from: game.thumbnail) { [weak self] result in
+    private func updateImage() {
+        guard let imageURL = imageURL else { return }
+        NetworkManager.shared.fetchImage(from: imageURL) { [weak self] result in
             switch result {
             case .success(let image):
                 guard let image = UIImage(data: image) else { return }
@@ -30,5 +30,17 @@ class GamesAllCollectionViewCell: UICollectionViewCell {
                 print(error)
             }
         }
+    }
+    
+    func setupCollectionView() {
+        activityIndicator.startAnimating()
+        activityIndicator.hidesWhenStopped = true
+        contentView.layer.cornerRadius = 15
+        contentView.layer.borderColor = UIColor.white.cgColor
+        contentView.layer.borderWidth = 3.0
+    }
+    
+    func configure(with game: FreeGames) {
+        imageURL = URL(string: game.thumbnail)
     }
 }
