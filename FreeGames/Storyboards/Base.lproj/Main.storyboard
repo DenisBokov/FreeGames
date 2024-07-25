@@ -57,7 +57,7 @@
                             <outlet property="delegate" destination="ETs-Cx-IMw" id="11k-sq-Qzr"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Free Games" style="editor" id="UTP-21-BjJ">
+                    <navigationItem key="navigationItem" title="Free Games" id="UTP-21-BjJ">
                         <barButtonItem key="rightBarButtonItem" image="rectangle.and.text.magnifyingglass.rtl" catalog="system" id="jgv-uM-DHG">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -210,7 +210,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fUx-9u-KVH" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="rdg-H7-diC">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" largeTitles="YES" id="rdg-H7-diC">
                         <rect key="frame" x="0.0" y="20" width="320" height="92.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
